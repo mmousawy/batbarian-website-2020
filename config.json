@@ -1,0 +1,70 @@
+{
+  "mysql": {
+    "dev": {
+      "hostname": "localhost",
+      "port": "3360",
+      "username": "root",
+      "password": ""
+    },
+    "production": {
+      "hostname": "localhost",
+      "port": "3360",
+      "username": "root",
+      "password": ""
+    }
+  },
+  "dev_server": {
+    "port": 5050
+  },
+  "buildOptions": {
+    "project": {
+      "name": "new-theme",
+      "source": "./src/new-theme",
+      "destination": "./wordpress/wp-content/themes/new-theme",
+      "wordpressRoot": "./wordpress",
+      "distribution": "./dist/new-theme"
+    },
+    "pages": {
+      "source": "/*.php",
+      "base": "/"
+    },
+    "partials": {
+      "source": "partials/**/*.php"
+    },
+    "images": {
+      "source": [
+        "assets/img/**/*.{png,jpg,jpeg}"
+      ],
+      "webp": {
+        "quality": 90
+      },
+      "png": {
+        "quality": [50, 85]
+      },
+      "jpeg": {
+        "quality": 75
+      }
+    },
+    "scss": {
+      "source": "scss/style.scss",
+      "watch": "scss/**/*.scss",
+      "base": "scss",
+      "destination": "/",
+      "browserList": "last 1 version, chrome > 70, not dead"
+    },
+    "javascript": {
+      "source": "js/index.js",
+      "watch": "js/**/*",
+      "destination": "/bundle.min.js"
+    },
+    "otherAssets": {
+      "source": [
+        "screenshot.png",
+        "assets/fonts/**/*",
+        "includes/**/*.php",
+        "templates/**/*.php",
+        "*.php"
+      ]
+    }
+  }
+}

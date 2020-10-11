@@ -18,18 +18,25 @@
   },
   "buildOptions": {
     "project": {
-      "name": "new-theme",
-      "source": "./src/new-theme",
-      "destination": "./wordpress/wp-content/themes/new-theme",
+      "name": "batbarian",
+      "source": "./src/batbarian",
+      "destination": "./wordpress/wp-content/themes/batbarian",
       "wordpressRoot": "./wordpress",
-      "distribution": "./dist/new-theme"
+      "distribution": "./dist/batbarian"
     },
     "pages": {
       "source": "/*.php",
       "base": "/"
     },
     "partials": {
-      "source": "partials/**/*.php"
+      "source": [
+        "templates/**/*.php"
+      ]
+    },
+    "includes": {
+      "source": [
+        "includes/**/*.php"
+      ]
     },
     "images": {
       "source": [
@@ -61,9 +68,9 @@
       "source": [
         "screenshot.png",
         "assets/fonts/**/*",
-        "includes/**/*.php",
         "templates/**/*.php",
-        "*.php"
+        "*.php",
+        "static/**/*"
       ]
     }
   }

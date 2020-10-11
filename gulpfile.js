@@ -372,7 +372,7 @@ function inlineSvgHTML(file, cb) {
 
         // Replace the matched string with the data URI
         fileContents = fileContents.slice(0, urlMatch.index)
-          + svgContents.trim()
+          + svgContents.trim().replace(/(\r\n|\n|\r)/gm, '')
           + fileContents.slice((urlMatch.index + urlMatch[0].length));
 
         urlPattern.lastIndex = (urlMatch.index + 1);
@@ -413,7 +413,8 @@ function htmlTask() {
 
   return gulp.src(concatSource([
     config.buildOptions.pages.source,
-    config.buildOptions.partials.source
+    config.buildOptions.partials.source,
+    config.buildOptions.includes.source,
   ]), {
     base: createSource(config.buildOptions.pages.base)
   })
@@ -534,7 +535,8 @@ function watchTask() {
   gulp.watch(
     concatSource([
       config.buildOptions.pages.source,
-      config.buildOptions.partials.source
+      config.buildOptions.partials.source,
+      config.buildOptions.includes.source,
     ]), {
       cwd: config.buildOptions.project.wordpressRoot
     }, gulp.series(htmlTask, reload));

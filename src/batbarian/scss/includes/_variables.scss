@@ -1,0 +1,55 @@
+/**
+ * Breakpoint definitions
+ */
+$breakpoints: (
+  "xs": 375px,
+  "s": 720px,
+  "m": 1024px,
+  "m-padding": 1152px,
+  "l": 1280px
+);
+
+/**
+ * List of color variables
+ */
+$cl-black: #000;
+$cl-black-secondary: #0C1128;
+$cl-black-tertiary: #0E253E;
+$cl-white: #fff;
+$cl-grey: #CFD9E6;
+$cl-dark-blue: #2E56E2;
+$cl-dark-grey: #5C6D81;
+$cl-darker-grey: #2E4156;
+$cl-light-grey:#E6EEF8;
+$cl-red: #E22E59;
+$cl-yellow: #FFC83A;
+$cl-purple: #472EE2;
+$cl-aqua: #26C9ED;
+
+$cl-background: #000;
+$cl-foreground: #f0f0f0;
+
+$cl-primary: #268CF5;
+$cl-secondary: #f7f7ee;
+$cl-button-background: #2E56E2;
+$cl-turquoise: #26C9ED;
+
+$cl-border: #E6EEF8;
+$cl-footer: #F6FAFF;
+
+$cl-hero-background: #0C1128;
+
+/**
+ * List of all z-indexes used throughout the whole project
+ */
+$zIndex--front: 3;
+$zIndex--content: 2;
+$zIndex--middle: 1;
+$zIndex--bottom: 0;
+$zIndex--menu: 10;
+
+/**
+ * List of all size variables for containers
+ */
+$sz-container-max-width: 1280px;
+$sz-container-padding: 3.2rem;

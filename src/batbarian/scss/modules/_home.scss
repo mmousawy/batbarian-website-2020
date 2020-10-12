@@ -15,6 +15,10 @@ main > section {
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 .topbar {
   $cl-form: #8c303d;
   position: relative;

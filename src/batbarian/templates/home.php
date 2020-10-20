@@ -47,6 +47,9 @@ $headerImage = get_field('header_image');
 
   <section class="stores">
     <div class="container">
+      <h2 class="buy-game-title">Buy the game from:</h2>
+    </div>
+    <div class="container stores__list">
       <?php
         $storeLinks = get_field('store_links');
 
@@ -74,6 +77,48 @@ $headerImage = get_field('header_image');
     <div class="game-plot-text container">
       <?= get_field('game_plot_text') ?>
     </div>
+
+    <div class="container buy-now">
+      <div id="xsolla-buy-button-widget"></div>
+    </div>
+    <script>
+        var options = {
+          access_data: {
+            settings: {
+              project_id: 57717
+            },
+            purchase: {
+              pin_codes: {
+                codes: [{ digital_content: 'Steam' }]
+              }
+            },
+            user: {
+              country: {
+                allow_modify: false
+              }
+            }
+          },
+          theme: {
+            foreground: 'red',
+            background: 'dark'
+          },
+          template: 'simple',
+          lightbox: {
+            height: '700px',
+            spinner: 'round'
+          },
+          target_element: '#xsolla-buy-button-widget'
+        };
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://cdn.xsolla.net/embed/pay2play/2.3.0/widget.min.js';
+        s.addEventListener('load', function (e) {
+            var widgetInstance = XPay2PlayWidget.create(options);
+        }, false);
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(s);
+    </script>
 
     <div class="gallery container">
       <?= do_shortcode('[acf_gallery_slider acf_field="screenshots" autoplay_speed="5000"]') ?>

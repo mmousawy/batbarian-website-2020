@@ -162,7 +162,7 @@ add_filter('dynamic_sidebar_params', 'changeWidgetTitle');
  * Enqueue theme script and style
  */
 function enqueueAssets() {
-  wp_enqueue_style('theme', get_stylesheet_uri());
+  wp_enqueue_style('theme', get_stylesheet_uri(), [], '1.0.1');
   wp_enqueue_script('theme', get_template_directory_uri() . '/bundle.min.js', [], '1.0.0', true);
 
   define('SITE_TITLE', getSiteTitle());

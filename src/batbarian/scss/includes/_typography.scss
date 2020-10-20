@@ -1,14 +1,24 @@
 $fn-primary-name: 'kongtextregular';
 $fn-primary: $fn-primary-name, -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Fira Sans', Avenir, 'Helvetica Neue', 'Lucida Grande', sans-serif;
 
+$fn-secondary-name: 'joystix';
+$fn-secondary: $fn-secondary-name, -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Fira Sans', Avenir, 'Helvetica Neue', 'Lucida Grande', sans-serif;
+
 $fn-weight--regular: 400;
 $fn-weight--medium: 500;
 $fn-weight--bold: 700;
 
 @font-face {
-	font-family: $fn-primary-name;
-	src: url('./static/fonts/kongtext-webfont.woff2') format('woff2'),
-			 url('./static/fonts/kongtext-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: $fn-primary-name;
+  src: url('./static/fonts/kongtext-webfont.woff2') format('woff2'),
+       url('./static/fonts/kongtext-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fn-secondary-name;
+  src: url('./static/fonts/joystix-monospace.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
